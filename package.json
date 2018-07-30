@@ -1,0 +1,22 @@
+{
+  "name": "prime",
+  "version": "1.0.0",
+  "description": "first package",
+  "main": "run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llwch/protractor.itech.git"
+  },
+  "keywords": [
+    "protractor"
+  ],
+  "author": "Anton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/llwch/protractor.itech/issues"
+  },
+  "homepage": "https://github.com/llwch/protractor.itech#readme"
+}
