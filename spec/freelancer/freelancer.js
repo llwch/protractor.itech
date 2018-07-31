@@ -23,7 +23,7 @@ describe('login to the freelancer.com', function() {
         let loginField = element(by.id('username'));
         let passwordField = element(by.id('password'));
         let loginButton = element(by.id('login_btn'));
-        
+        console.log('111111111111111111')
         await loginField.sendKeys('abyss.itech@gmail.com');
         await passwordField.sendKeys('12qwaszx');
             
