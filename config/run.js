@@ -6,7 +6,8 @@ exports.config = {
   specs: ['../spec/freelancer/freelancer.js'],
   capabilities: env.capabilities,
     jasmineNodeOpts: {
-      showColors: true
+      showColors: true,
+      defaultTimeoutInterval: 120000,
     }
   
 }
