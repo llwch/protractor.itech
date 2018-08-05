@@ -28,6 +28,21 @@ describe('login to the freelancer.com', function() {
         expect(usernameError.getText()).toEqual('Please enter a valid username or email address.');
     });
 
+    it('should check validation error for empty password', async function(){
+        await loginLink.click();
+        await browser.refresh();
+
+        let loginField = element(by.id('username'));
+        let passwordField = element(by.id('password'));
+        let loginButton = element(by.id('login_btn'));
+        await loginField.sendKeys('abyss.itech@gmail.com');
+        await passwordField.sendKeys('');
+        await browser.sleep(1000);
+        await loginButton.click();
+        let passwordError = element(by.css("[ng-message='required']"));
+        expect(passwordError.getText()).toEqual('Please enter your password.');
+    });
+
     it('should login to app', async function() {
         await loginLink.click();
         await browser.refresh();
