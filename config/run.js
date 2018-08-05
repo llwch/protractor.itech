@@ -8,6 +8,9 @@ exports.config = {
     jasmineNodeOpts: {
       showColors: true,
       defaultTimeoutInterval: 120000,
-    }
+    },
+    onPrepare: function () {
+      browser.manage().window().maximize();
+  }
   
 }
