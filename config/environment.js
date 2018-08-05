@@ -1,4 +1,4 @@
-var webServerDefaultPort = 4444;
+const webServerDefaultPort = 4444;
 
 module.exports = {
   seleniumAddress:
