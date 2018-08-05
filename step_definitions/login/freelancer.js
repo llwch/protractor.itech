@@ -1,8 +1,10 @@
+var mainPage = require('../../support/main.page');
+
 describe('login to the freelancer.com', function() {
-    let loginLink = element(by.css("[data-uitest-target='login-button']"));
   
     beforeEach(async function() {
-        await browser.get('https://www.freelancer.com/');
+        var mainPage = new mainPage();
+        await mainPage.get();
     });
   
     it('should verify title name', async function() {
@@ -10,13 +12,13 @@ describe('login to the freelancer.com', function() {
     });
   
     it('should open login modal', async function(){
-        await loginLink.click();
+        await mainPage.openLoginform();
         await browser.refresh();
         expect(browser.getCurrentUrl()).toEqual("https://www.freelancer.com/login");
     });
 
     it('should check validation error for username', async function(){
-        await loginLink.click();
+        await mainPage.openLoginform();
         await browser.refresh();
 
         let loginField = element(by.id('username'));
@@ -29,7 +31,7 @@ describe('login to the freelancer.com', function() {
     });
 
     it('should check validation error for empty password', async function(){
-        await loginLink.click();
+        await mainPage.openLoginform();
         await browser.refresh();
 
         let loginField = element(by.id('username'));
@@ -44,7 +46,7 @@ describe('login to the freelancer.com', function() {
     });
 
     it('should login to app', async function() {
-        await loginLink.click();
+        await mainPage.openLoginform();
         await browser.refresh();
 
         let loginField = element(by.id('username'));
