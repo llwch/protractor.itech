@@ -1,10 +1,17 @@
 {
-  "name": "prime_v4",
-  "version": "1.4.0",
+  "name": "prive_v5",
+  "version": "1.5.0",
   "description": "first package",
   "main": "run.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "npm run update-webtdriver",
+    "update": "node node_modules/protractor/bin/webdriver-manager update",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node config/protractor-conf.js"
+  },
+  "engines": {
+    "node": ">=0.12.0",
+    "npm": ">=3.10.8"
   },
   "repository": {
     "type": "git",
@@ -24,5 +31,6 @@
     "cucumber": "^4.2.1",
     "protractor": "^5.4.0",
     "protractor-cucumber-framework": "^6.0.0"
-  }
+  },
+  "devDependencies": {}
 }
