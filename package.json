@@ -6,7 +6,7 @@
   "scripts": {
     "install": "npm run update-webtdriver",
     "update": "node node_modules/protractor/bin/webdriver-manager update",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cucumber-js",
     "start": "node config/protractor-conf.js"
   },
   "engines": {
@@ -28,9 +28,10 @@
   "homepage": "https://github.com/llwch/protractor.itech#readme",
   "dependencies": {
     "chai": "^4.1.2",
-    "cucumber": "^4.2.1",
     "protractor": "^5.4.0",
     "protractor-cucumber-framework": "^6.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "cucumber": "^4.2.1"
+  }
 }
