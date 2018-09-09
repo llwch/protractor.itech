@@ -1,4 +1,4 @@
-var mainPage = require('../../support/main.page');
+var mainPage = require('../../support/title.page');
 
 describe('login to the freelancer.com', function() {
   
