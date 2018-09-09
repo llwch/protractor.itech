@@ -8,4 +8,4 @@ Scenario: login steps
 Given I am on the 'login page'
 Then Element 'logo' should be displayed
 When I login to the application
-Then Element 'logo' should be displayed
+Then Element 'logo' should be displayed.
