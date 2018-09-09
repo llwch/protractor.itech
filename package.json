@@ -1,6 +1,6 @@
 {
-  "name": "prime_v3",
-  "version": "1.3.0",
+  "name": "prime_v4",
+  "version": "1.4.0",
   "description": "first package",
   "main": "run.js",
   "scripts": {
@@ -22,9 +22,7 @@
   "dependencies": {
     "chai": "^4.1.2",
     "cucumber": "^4.2.1",
-    "protractor": "^5.4.0"
-  },
-  "devDependencies": {
+    "protractor": "^5.4.0",
     "protractor-cucumber-framework": "^6.0.0"
   }
 }
