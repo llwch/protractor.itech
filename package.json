@@ -2,7 +2,7 @@
   "name": "prive_v5",
   "version": "1.5.0",
   "description": "first package",
-  "main": "run.js",
+  "main": "protractor-conf.js",
   "scripts": {
     "install": "npm run update-webtdriver",
     "update": "node node_modules/protractor/bin/webdriver-manager update",
