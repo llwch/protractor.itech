@@ -6,8 +6,8 @@
   "scripts": {
     "install": "npm run update-webtdriver",
     "update": "node node_modules/protractor/bin/webdriver-manager update",
-    "test": "cucumber-js",
-    "start": "node config/protractor-conf.js"
+    "protractor": "node_modules\\.bin\\protractor config/protractor-conf.js",
+    "ui-cucumber": "npm run protractor"
   },
   "engines": {
     "node": ">=0.12.0",
