@@ -19,31 +19,32 @@ exports.config = {
   baseUrl: 'https://www.freelancer.com/',
   ignoreUncaughtExceptions: true,
   frameworkPath: require.resolve('protractor-cucumber-framework'),
+  resultJsonOutputFile: '../reports/report.json',
     
-    cucumberOpts: {
+  cucumberOpts: {
       require: steps
-    },
+  },
 
-    jasmineNodeOpts: {
+  jasmineNodeOpts: {
       showColors: true,
       defaultTimeoutInterval: 120000,
-    },
-    onPrepare: function () {
-      browser.manage().window().maximize();
+  },
+  onPrepare: async function () {
+      await browser.manage().window().maximize();
   },
 
   allScriptsTimeout: 12000,
 
   afterLaunch: function(){
-    var reporter = require('cucumber-html-reporter');
-    var options = {
+    let reporter = require('cucumber-html-reporter');
+    let options = {
             theme: 'bootstrap',
-            jsonFile: '../reports/cucumber_report.json',
-            output: '../reports/cucumber_report.html',
+            jsonFile: '../reports/report.json',
+            output: '../reports/report.html',
             reportSuiteAsScenarios: true,
             launchReport: true,
             storeScreenshots: true,
-            screenshotsDirectory: '../reports/screenshots',
+            screenshotsDirectory: 'screenshots/',
             metadata: {
                 "App Version":"0.3.2",
                 "Test Environment": "STAGING",
