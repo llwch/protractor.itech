@@ -1,5 +1,6 @@
 class Page {
     constructor(){}
+    
     getUrl(){
         return browser.getCurrentUrl();
     }

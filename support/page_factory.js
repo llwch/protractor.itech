@@ -1,6 +1,7 @@
 const MainPage = require('./main.page');
 const LoginPage = require('./login.page');
 const DashboardPage = require('./dashboard.page');
+
 let pageFactory = {
     currentPage: null,
     pages: {
@@ -8,8 +9,10 @@ let pageFactory = {
         'login page': LoginPage,
         'dashboard': DashboardPage
     },
+
     getPage(pageName) {
         this.currentPage = new this.pages[pageName]();
         return this.currentPage;
     }
 };
+module.exports = pageFactory;

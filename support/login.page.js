@@ -1,5 +1,5 @@
 const Page = require('./page');
-class LoginPage extends Page{
+class LoginPage extends Page {
   constructor() {
     super();
     this.url = 'https://www.freelancer.com/login/';
@@ -18,4 +18,4 @@ class LoginPage extends Page{
       await this.data.loginButton.click();
     }
   }
-  module.exports = LoginPage;
+  module.exports = new LoginPage();

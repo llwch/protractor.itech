@@ -6,6 +6,7 @@
   "scripts": {
     "install": "npm run update-webtdriver",
     "update": "node node_modules/protractor/bin/webdriver-manager update",
+    "start": "node node_modules/protractor/bin/webdriver-manager start",
     "protractor": "node_modules\\.bin\\protractor config/protractor-conf.js",
     "ui-cucumber": "npm run protractor"
   },
@@ -29,9 +30,10 @@
   "dependencies": {
     "chai": "^4.1.2",
     "protractor": "^5.4.1",
-    "protractor-cucumber-framework": "^6.0.0"
+    "selenium-webdriver": "^4.0.0-alpha.1"
   },
   "devDependencies": {
-    "cucumber": "^4.2.1"
+    "cucumber": "^4.2.1",
+    "protractor-cucumber-framework": "^6.1.1"
   }
 }

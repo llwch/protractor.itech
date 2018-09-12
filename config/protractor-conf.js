@@ -1,5 +1,15 @@
 var env = require('./environment.js');
 
+const stepsFolder = './step_definitions';
+const fs = require('fs');
+
+var steps = []
+
+fs.readdirSync(stepsFolder).forEach(file => {
+    step = stepsFolder + '/' + file;
+    steps.push(step);
+  });
+
 exports.config = {
 
   framework: 'custom',
@@ -11,9 +21,7 @@ exports.config = {
   frameworkPath: require.resolve('protractor-cucumber-framework'),
     
     cucumberOpts: {
-      require: [
-        '../step_definitions/*.js'
-      ]
+      require: steps
     },
 
     jasmineNodeOpts: {
@@ -25,5 +33,4 @@ exports.config = {
   },
 
   allScriptsTimeout: 12000
-  
-}
+};
